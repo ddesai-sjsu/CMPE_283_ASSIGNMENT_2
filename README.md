@@ -80,8 +80,8 @@ when a special CPUID “leaf function” is called.
 
   1. <b> Does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?</b>
 
-  *  The number of exits does not increase at a stable rate. Yes more exits are performed during certain VM operations/instructions like EPT violation, I/O instruction, RDTSCP etc.
+  *  The number of exits does not increase at a stable rate. Yes more exits are performed during certain VM operations like EPT violation, I/O instruction, Page Fault exists etc.
 
-  * The number of exits after the first build, reboot and entering the nested VM using the KVM is 172,456. This is not very accurate as there might have been a shutdown period and hardware interrupts in-between.
+  * The number of exits in our case is approximately around 172,456 this includes build, reboot, nested vm logging etc. This is an approximate number as there would be addtional parameter like a shutdown period, idle period, hardware interrupts etc.
 
 
